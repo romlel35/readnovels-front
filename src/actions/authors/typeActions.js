@@ -1,0 +1,2 @@
+export const CONNECT_AUTHOR = "CONNECT_AUTHOR";
+export const LOGOUT_AUTHOR = "LOGOUT_AUTHOR";

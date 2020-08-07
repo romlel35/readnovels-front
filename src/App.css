@@ -1,7 +1,10 @@
 .App {
   text-align: center;
 }
-
+html{
+  margin: 0 auto;
+  padding: 0;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +38,388 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+@media screen and (max-width: 750px) { 
+  nav{
+    margin: 0 auto;
+  }
+ 
+
+  h2{
+    margin: 0 auto;
+    padding:0;
+    width: auto;
+    display: block;
+  }
+  nav h2 a {
+    color: black;
+  }
+
+
+  #flag{
+    margin-top:1.5%;
+    padding: 1%;
+
+    position: relative;
+  
+    font-weight: bolder;
+  
+    
+    width: 100%;
+    background-image: url("./assets/images/imaginary-island.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position-y: center;
+   
+  }
+  #flag h1{
+ 
+   font-size: 2rem;
+    color: silver;
+
+
+   
+
+  }
+  /*****Main********/
+  
+  
+
+  /*bookstore*/
+  li{
+    margin: 2%;
+    list-style-type: none;
+    display: block;
+  }
+
+  /******Footer ********/
+  body {position: relative;}
+  
+ 
+  #footer{
+    margin-top: 4%;
+    padding: 1%;
+
+    
+    
+  
+    background-color: rgba(216, 135, 106, 0.877);
+    background: linear-gradient(50deg, rgba(251, 255, 7, 0.979) 0%, rgb(238, 166, 11) 100%);
+    
+  }
+} 
+/*****************************
+*****Header***************
+*************************/
+@media screen and ( min-width: 750px) and (max-width: 1050px){
+
+
+  body{
+    font-size: 1.2rem;
+   
+  }
+
+  button, input{
+    font-size: 1.2em;
+  }
+  button{
+    margin-top:2%;
+    margin-bottom: 2%;
+  }
+  nav{
+    margin-top: 0.5%;
+    padding: 1%;
+
+   
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  
+    
+  }
+  nav h2{
+   
+    margin-left: 3%;
+    font-size: 1.1em;
+
+    
+    
+  }
+  nav a{
+   
+    padding: 0.5%;
+    width: 500px;
+    color: black;
+    font-weight: bolder;
+  }
+  
+  nav a:hover{
+    cursor: pointer;
+  
+  
+    
+    background-color: darkgrey;
+  }
+  #flag{
+    margin-top:0.8%;
+    padding: 1%;
+  
+    font-weight: bolder;
+  
+    height: 300px;
+    background-image: url("./assets/images/imaginary-island.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+  }#flag h1{
+    margin-left: 50px;
+   font-size: 3rem;
+    color: grey;
+  }
+  
+  /***********************
+  *****Main*****************
+  ************************/
+  .bolder{
+    font-weight: bolder;
+  }
+  form{
+    margin: 1%;
+    margin-left: 35%;
+    padding: 1%;
+  
+    width: 30%;
+  
+  }
+  
+  fieldset{
+    margin: 1%;
+  }
+  
+  table{
+  
+    border-collapse: collapse;
+  
+    width: 100%;
+  }
+  td{
+    margin: 1%;
+    padding: 3%;
+  
+    border: 1px solid black;
+  }
+  #romansAdmin form, #romansAdmin table{
+    margin: 1%;
+  }
+  #romansAdmin{
+  
+    display: flex;
+    flex-direction: row;
+    
+    vertical-align: middle;
+  }
+  #editNovels{
+    margin: 2%;
+    width: 30%;
+  }
+  .hoverDetail:hover {
+    background-color: darkkhaki;
+    cursor: pointer;
+  }
+  textarea{
+    height: 100px;
+  }
+  
+  #contentChapter{
+    margin-top: 2%;
+    margin-bottom: 3%;
+    margin-left: 32%;
+    padding: 2%;
+  
+  
+    width: 35%;
+    background-color: silver;
+    
+    color: whitesmoke;
+    font-weight: bolder;
+  }
+  
+    /*bookstore*/
+    li{
+      margin: 2%;
+      list-style-type: none;
+      display: inline-block;
+    }
+  
+  /******Footer ********/
+  #footer{
+  
+    padding: 1%;
+  
+    background-color: rgba(216, 135, 106, 0.877);
+    background: linear-gradient(50deg, rgba(251, 255, 7, 0.979) 0%, rgb(238, 166, 11) 100%);
+    
+  }
+}
+
+
+@media screen and ( min-width: 1050px){
+
+
+
+  body{
+    font-size: 1.2rem;
+  }
+
+  button, input{
+    font-size: 1.2em;
+  }
+  button{
+    margin-top:2%;
+    margin-bottom: 2%;
+  }
+  nav{
+    margin-top: 0.5%;
+    padding: 1%;
+
+   
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+  nav h2{
+   
+    margin-left: 3%;
+    font-size: 1.1em;
+
+    text-align: center;
+    
+  }
+  nav a{
+   
+    padding: 0.5%;
+    width: 500px;
+    color: black;
+    font-weight: bolder;
+  }
+  
+  nav a:hover{
+    cursor: pointer;
+  
+  
+    
+    background-color: darkgrey;
+  }
+  #flag{
+    margin-top:0.8%;
+    padding: 1%;
+  
+    font-weight: bolder;
+  
+    height: 300px;
+    background-image: url("./assets/images/imaginary-island.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+  }#flag h1{
+    margin-left: 50px;
+   font-size: 3rem;
+    color: grey;
+  }
+  
+  /***********************
+  *****Main*****************
+  ************************/
+  .bolder{
+    font-weight: bolder;
+  }
+  form{
+    margin: 1%;
+    margin-left: 35%;
+    padding: 1%;
+  
+    width: 30%;
+  
+  }
+  
+  fieldset{
+    margin: 1%;
+  }
+  
+  table{
+  
+    border-collapse: collapse;
+  
+    width: 100%;
+  }
+  td{
+    margin: 1%;
+    padding: 3%;
+  
+    border: 1px solid black;
+  }
+  #romansAdmin form, #romansAdmin table{
+    margin: 1%;
+  }
+  #romansAdmin{
+  
+    display: flex;
+    flex-direction: row;
+    
+    vertical-align: middle;
+  }
+  #editNovels{
+    margin: 2%;
+    width: 30%;
+  }
+  .hoverDetail:hover {
+    background-color: darkkhaki;
+    cursor: pointer;
+  }
+  textarea{
+    height: 100px;
+  }
+  
+  #contentChapter{
+    margin-top: 2%;
+    margin-bottom: 3%;
+    margin-left: 32%;
+    padding: 2%;
+  
+  
+    width: 35%;
+    background-color: silver;
+    
+    color: whitesmoke;
+    font-weight: bolder;
+  }
+  
+    /*bookstore*/
+    li{
+      margin: 2%;
+      list-style-type: none;
+      display: inline-block;
+    }
+  
+  /******Footer ********/
+  #footer{
+  
+    padding: 1%;
+  
+    background-color: rgba(216, 135, 106, 0.877);
+    background: linear-gradient(50deg, rgba(251, 255, 7, 0.979) 0%, rgb(238, 166, 11) 100%);
+    
+  }
+
+
+
+
+
+
 }

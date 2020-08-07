@@ -1,0 +1,2 @@
+export const CONNECT_READER = "CONNECT_READER";
+export const LOGOUT_READER = "LOGOUT_READER";
