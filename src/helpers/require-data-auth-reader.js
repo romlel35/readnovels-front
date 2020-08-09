@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-
+import config from "../config";
 import axios from "axios";
 import {Redirect} from 'react-router-dom';
 import {connectReader} from '../actions/readers/readerActions'
@@ -29,7 +29,7 @@ export default function(ChildComponent, withAuth = false) {
 				this.setState({redirect: true})
 			}  else {
 				console.log("ça passe dans le else : ");
-				axios.get("http://localhost:8000/readnovels-rle/readers/checkToken", { headers: { "x-access-token": token }})
+				axios.get(config.apiUrl+"readnovels-rle/readers/checkToken", { headers: { "x-access-token": token }})
 				.then((response)=>{
                     console.log("Réponse du checktoken ci-dessous")
 					console.log(response);
