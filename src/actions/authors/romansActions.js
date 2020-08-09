@@ -37,7 +37,7 @@ export const listRomansByAuthorId = (id) =>{
   
     return function(dispatch){
         console.log("******Début action listRomansByAuthorId**********")
-
+        console.log("id : "+id)
         Axios.get(config.apiUrl+"readnovels-rle/romans/getAllByAuthorId/"+id
         ).then((res)=>{
             console.log("res : ",res)

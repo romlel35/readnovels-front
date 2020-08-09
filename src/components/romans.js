@@ -79,8 +79,12 @@ class Romans extends React.Component{
                    this.setState({msg: "There was a problem during the update"})
                 }
                 else{
-                    this.setState({msg : "Your roman has been successfully added"})
+                    this.setState({msg : "Your roman has been successfully added"});
+                   
+                    console.log("ici on monte les romans!!!!")
+                    this.props.listRomansByAuthorId(this.props.author.infos.id);
                 }
+              
                
         })
        
@@ -88,15 +92,14 @@ class Romans extends React.Component{
             console.log(err);
         })
 
-      
     }
 
     
     componentDidMount = () =>{
      
-     
-            console.log("ici on monte les romans!!!!")
-            this.props.listRomansByAuthorId(this.props.author.infos.id);
+        console.log("ici on monte les romans!!!!")
+        this.props.listRomansByAuthorId(this.props.author.infos.id);
+           
             //this.props.listRomans();
         
         

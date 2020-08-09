@@ -1,5 +1,7 @@
 const config = {
-    apiUrl: "http://localhost:8000/"
+    apiUrl: "https://readnovels.herokuapp.com/"
 }
 
 export default config;
+
+//" pour le local : http://localhost:8000/"

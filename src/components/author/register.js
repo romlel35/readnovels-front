@@ -9,7 +9,7 @@ class Register extends React.Component{
         this.state = {
 
             msg: null,
-            role: "reader"
+            role: "auteur"
         }
         this.firstName = "";
         this.lastName="";
@@ -40,7 +40,7 @@ class Register extends React.Component{
         console.log("coucou on passe dans handleSubmit");
 
         if(this.validatorPassword(this.password)){
-            if(this.state.role === "author"){
+            if(this.state.role === "auteur"){
                 let data = {
 
                     firstName:this.firstName,
@@ -51,7 +51,7 @@ class Register extends React.Component{
                     zip: this.zip,
                     city: this.city,
                     penName: this.penName,
-                    role: "author"
+                
         
                 }
                 console.log("data : ",data);
@@ -77,7 +77,7 @@ class Register extends React.Component{
                 })
 
             }
-            else if(this.state.role === "reader"){
+            else if(this.state.role === "lecteur"){
                 let data = {
 
                     firstName:this.firstName,
@@ -139,8 +139,8 @@ class Register extends React.Component{
                                   this.handleChange(e);
                                   
                               }}>
-                  <option>lecteur</option>
                   <option>auteur</option>
+                  <option>lecteur</option>
                 </select>
                 <form 
                 onSubmit={(e)=>{
@@ -175,7 +175,7 @@ class Register extends React.Component{
                             this.onChangetext('password',e.currentTarget.value)
                         }}></input>
                     </fieldset>
-                   {this.state.role === "author" &&
+                   {this.state.role === "auteur" &&
                    
                    <div>
                         <fieldset className="insideField" > 
@@ -211,7 +211,7 @@ class Register extends React.Component{
                    
                    }
                     
-                    {this.state.role === "reader" &&
+                    {this.state.role === "lecteur" &&
                     <fieldset >
                         <label htmlFor="pseudo">pseudo : </label>
                         <input id="pseudo" name="pseudo" placeholder="pseudo" 
