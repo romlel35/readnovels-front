@@ -1,5 +1,5 @@
 import React from 'react';
-import CheckoutForm from '../components/checkout-form'
+import CheckoutForm from './checkout-form'
 import {loadStripe} from '@stripe/stripe-js';
 import {Elements, ElementsConsumer} from '@stripe/react-stripe-js';
 

@@ -1,17 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import Axios from 'axios';
-import DatePicker from "react-datepicker";
-import { registerLocale, setDefaultLocale } from  "react-datepicker";
+
 import fr from 'date-fns/locale/fr';
+import {listRomansByReaderId} from "../../actions/readers/romansActions";
 
-import {listRomans,listRomansByAuthorId} from "../actions/authors/romansActions";
-import {addOne} from "../actions/panier"
 
-import "react-datepicker/dist/react-datepicker.css";
-import config from'../config';
-import moment from 'moment';
-import localization from 'moment/locale/fr';
 import {Link} from "react-router-dom";
 import {
     Image,
@@ -20,16 +13,9 @@ import {
     CloudinaryContext,cloudinary
   } from "cloudinary-react";
 
-moment.updateLocale('fr', localization);
-
-var format = require('date-format');
-format.asString(); //defaults to ISO8601 format and current date.
-format.asString(new Date()); //defaults to ISO8601 format
-format.asString('hh:mm:ss.SSS', new Date()); //just the time
-var FA = require('react-fontawesome')
 
 
-class BookStore extends React.Component{
+class Library extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -40,7 +26,7 @@ class BookStore extends React.Component{
         this.category = "";
         this.summary = "";
      
-        registerLocale('fr', fr)
+        
       
     }
    
@@ -56,8 +42,8 @@ class BookStore extends React.Component{
      
      
             console.log("ici on monte les romans!!!!")
-            this.props.listRomans();
-            //this.props.listRomans();
+            this.props.listRomansByReaderId(this.props.reader.infos.id);
+           
         
         
        
@@ -66,7 +52,7 @@ class BookStore extends React.Component{
 
 
     render(){
-        console.log("****Sur la liste des Romans******")
+        console.log("****Sur la liste des Romans du lecteur******")
       console.log(this.props)
        
    
@@ -75,7 +61,7 @@ class BookStore extends React.Component{
 
             <div>
                
-              <h2> Romans disponibles</h2>
+              <h2>Votre bibliothèque</h2>
                {this.state.msg !== null &&
                             <p>{this.state.msg}</p>
                             }
@@ -98,6 +84,7 @@ class BookStore extends React.Component{
                               
                                    
                                      <li className="hoverDetail" key={index}>
+                                       <Link to={"lecture/"+roman.id}>
                                        <h3> {roman.title}</h3>
                                          <CloudinaryContext cloudName="hg3x1q3eq">
                                             <div>
@@ -106,17 +93,8 @@ class BookStore extends React.Component{
                                                 </Image>
                                             </div>
                                         </CloudinaryContext>
-                                        <p>  Price : {roman.price} euros </p> <p><button><FA 
-                                 
-                                 className="cart"
-                                 size='3x'
-                                
-                                 style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-                                 name="shopping-cart" 
-                                 onClick={(e) =>{
-                                     e.preventDefault();
-                                     this.props.addOne(this.props.panier.panier,roman)
-                                 }}/></button></p>
+                                       </Link>
+                                      
                                     </li>
                                 
                              )
@@ -144,17 +122,17 @@ class BookStore extends React.Component{
 const mapStateToProps = (store) => {
     return {
       romans : store.romans,
-      author: store.author,
+      reader: store.reader,
       panier: store.panier
     }
   }
   const mapDispatchToProps = {
-     listRomans,
-     listRomansByAuthorId,
-     addOne
+     
+     listRomansByReaderId,
+    
   }
   
-  export default connect(mapStateToProps, mapDispatchToProps)(BookStore );
+  export default connect(mapStateToProps, mapDispatchToProps)(Library );
 
 
   /*

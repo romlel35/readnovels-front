@@ -1,10 +1,10 @@
 import React from 'react';
 import {CardElement} from '@stripe/react-stripe-js';
 import axios from "axios";
-import config from '../config'
+import config from '../../config'
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
-import {removeOne} from "../actions/panier";
+import {removeOne, removeAll} from "../../actions/panier";
 
 // formulaire de carte bancaire
 class CheckoutForm extends React.Component {
@@ -59,7 +59,7 @@ class CheckoutForm extends React.Component {
                   reader_id: this.props.reader.infos.id
                 }
                 //on enregistre en bdd le status payed 
-                axios.put(config.apiUrl+"readnovels-rle/romans/validate", data, { headers: { 'x-access-token': this.props.reader.infos.token }})
+                axios.post(config.apiUrl+"readnovels-rle/romans/validate", data, { headers: { 'x-access-token': this.props.reader.infos.token }})
                 .then((response)=>{
                     console.log(response);
                     this.setState({redirect: true})
@@ -115,7 +115,8 @@ const mapStateToProps = (store) => {
   }
 }
 const mapDispatchToProps = {
-	removeOne,
+  removeOne,
+  removeAll
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CheckoutForm);

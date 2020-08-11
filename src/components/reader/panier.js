@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from 'react-redux';
-import {addOne, removeOne, removeAll} from "../actions/panier";
+import {addOne, removeOne, removeAll} from "../../actions/panier";
 import {
     Image,
     Video,

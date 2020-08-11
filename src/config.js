@@ -5,3 +5,4 @@ const config = {
 export default config;
 
 //" pour le local : http://localhost:8000/"
+//" pour la prod :https://readnovels.herokuapp.com/"

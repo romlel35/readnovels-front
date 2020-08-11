@@ -1,28 +1,28 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Route, Switch} from 'react-router-dom';
+
 import Header from "./components/header";
 import Footer from "./components/footer"
-
-import {Route, Switch} from 'react-router-dom';
-import Register from './components/author/register';
-import Login from './components/author/login';
 import Home from './components/home';
 import RequireDataAuth from "./helpers/require-data-auth";
 import RequireDataAuthReader from "./helpers/require-data-auth-reader";
+
+import Register from './components/author/register';
+import Login from './components/author/login';
 import Profil from "./components/author/profil";
 import Logout from "./components/author/logout";
-import Romans from "./components/romans";
+import Romans from "./components/author/romans";
+import DetailRoman from "./components/author/detailRoman";
 
-import DetailRoman from "./components/detailRoman";
-import BookStore from "./components/bookstore";
-import Library from "./components/library";
-import Panier from "./components/panier";
-
+import BookStore from "./components/reader/bookstore";
+import Library from "./components/reader/library";
+import SalonLecture from "./components/reader/salonLecture";
+import Panier from "./components/reader/panier";
 import ProfilReader from "./components/reader/profilReader";
 import LogoutReader from "./components/reader/logoutReader";
-
-import Paiement from "./components/payement";
+import Paiement from "./components/reader/payement";
 
 
 function App() {
@@ -45,6 +45,8 @@ function App() {
      <Route exact path="/logoutReader" component={RequireDataAuthReader(LogoutReader, true)}/>
      <Route exact path="/bookStore" component={RequireDataAuthReader(BookStore, true)}/>
      <Route exact path="/library" component={RequireDataAuthReader(Library, true)}/>
+     <Route exact path="/lecture/:id" component={RequireDataAuthReader(SalonLecture, true)}/>
+
      <Route exact path="/cart" component={RequireDataAuthReader(Panier, true)}/>
      <Route exact path="/pay" component={RequireDataAuthReader(Paiement, true)}/>
   

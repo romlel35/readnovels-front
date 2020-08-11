@@ -1,6 +1,7 @@
 import { combineReducers } from "redux";
 import {authorReducer} from "./authorReducer";
 import romansReducer from "./romansReducer";
+import romansReducerReader from "./romansReaderReducer";
 import {readerReducer} from "./readerReducer";
 import romanReducer from "./romanReducer";
 import chapitresReducer from "./chapitresReducer.js";
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
    roman: romanReducer,
    chapitres: chapitresReducer,
    reader: readerReducer,
-   panier: panierReducer
+   panier: panierReducer,
+   biblio: romansReducerReader
 
 })
 

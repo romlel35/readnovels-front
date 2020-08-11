@@ -5,14 +5,13 @@ import DatePicker from "react-datepicker";
 import { registerLocale, setDefaultLocale } from  "react-datepicker";
 import fr from 'date-fns/locale/fr';
 
-import {listRomans,listRomansByAuthorId} from "../actions/authors/romansActions";
-import {addOne} from "../actions/panier"
+import {listRomans,listRomansByAuthorId} from "../../actions/authors/romansActions";
+import {addOne} from "../../actions/panier"
 
 import "react-datepicker/dist/react-datepicker.css";
-import config from'../config';
 import moment from 'moment';
 import localization from 'moment/locale/fr';
-import {Link} from "react-router-dom";
+
 import {
     Image,
     Video,
@@ -29,7 +28,7 @@ format.asString('hh:mm:ss.SSS', new Date()); //just the time
 var FA = require('react-fontawesome')
 
 
-class Library extends React.Component{
+class BookStore extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -154,7 +153,7 @@ const mapStateToProps = (store) => {
      addOne
   }
   
-  export default connect(mapStateToProps, mapDispatchToProps)(Library );
+  export default connect(mapStateToProps, mapDispatchToProps)(BookStore );
 
 
   /*

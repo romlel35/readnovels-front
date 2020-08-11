@@ -1,44 +1,16 @@
 
 import config from "../../config";
 import Axios from "axios";
-import {listChapitresByRomanId} from "./chapitresActions";
-export const listRomans = () =>{
-
-    let list = [];
-
-    return function(dispatch){
-
-        fetch(config.apiUrl+"readnovels-rle/romans/getAll").then((res)=>{
-         
-            return res.json();
-            
-        })
-        .then((response)=>{
-            console.log("response action : ",response)
-            list = response.romans;
-            dispatch({
-                type: "GET_ALL_ROMANS",
-                payload: list
-            }) 
-        })
-        
-        .catch((error)=>{
-            console.log(error);
-            
-        });
-    }
 
 
-}
-
-export const listRomansByAuthorId = (id) =>{
+export const listRomansByReaderId = (id) =>{
 
     let list = [];
   
     return function(dispatch){
-        console.log("******Début action listRomansByAuthorId**********")
+        console.log("******Début action listRomansByReaderId**********")
         console.log("id : "+id)
-        Axios.get(config.apiUrl+"readnovels-rle/romans/getAllByAuthorId/"+id
+        Axios.get(config.apiUrl+"readnovels-rle/romans/getAllByReaderId/"+id
         ).then((res)=>{
             console.log("res : ",res)
             return res;
@@ -48,7 +20,7 @@ export const listRomansByAuthorId = (id) =>{
             console.log("response action : ",response)
             list = response.data.romans;
             dispatch({
-                type: "GET_ALL_ROMANS_BY_AUTHOR",
+                type: "GET_ALL_ROMANS_BY_READER",
                 payload: list
             }) 
         })
