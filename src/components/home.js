@@ -16,7 +16,7 @@ class Home extends React.Component{
             <div>
 
                <h1>Bienvenue</h1>
-                <p>Deviens auteur(trice) et partage ton monde avec d'autres...</p>
+                <h3>Deviens auteur(trice) et partage ton monde avec d'autres... Ajoutes et lis des romans! </h3>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tempor, ex sit amet dictum bibendum, magna est scelerisque ante, efficitur sagittis mauris tortor in quam. Suspendisse porta velit ut massa tempus rhoncus a nec elit. Fusce tempor, purus a commodo feugiat, felis diam pharetra elit, quis eleifend lectus ante a mauris. Vestibulum dui orci, varius nec blandit id, gravida vitae erat. Nunc pharetra eu diam eget lobortis. Ut mollis diam id nunc pretium bibendum. Nunc mollis risus a nisl blandit iaculis et vel metus. Nullam aliquam ipsum nec magna luctus semper. Curabitur mattis ipsum et nunc sollicitudin lobortis. Curabitur at turpis vel ante pellentesque placerat. Quisque molestie sollicitudin dui, vitae egestas turpis faucibus ullamcorper.
 
