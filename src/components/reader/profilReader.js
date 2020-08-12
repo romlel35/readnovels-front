@@ -97,7 +97,7 @@ class Profil extends React.Component{
                 }
         console.log("data dans edit : ",data)
     
-        Axios.put(config.api_url+"readers/update", data , { headers: { 'x-access-token': this.props.reader.infos.token }}).then((response) =>{
+        Axios.put(config.apiUrl+"readnovels-rle/readers/update", data , { headers: { 'x-access-token': this.props.reader.infos.token }}).then((response) =>{
 
                 if(response.status !== 200){
                    this.setState({msg: "There was a problem during the update"})
@@ -143,9 +143,7 @@ class Profil extends React.Component{
                     this.props.reader.infos.firstName
                 }</h2>}
 
-                        {this.state.msg !== null &&
-                            <p>{this.state.msg}</p>
-                            }
+                       
 
                 <div>
                 
@@ -209,11 +207,13 @@ class Profil extends React.Component{
                                 <input id="pseudo" name="pseudo" 
                                  defaultValue={this.props.reader.infos.city}
                                 onChange={(e)=>{
-                                    this.onChangetext('pseuod',e.currentTarget.value)
+                                    this.onChangetext('pseudo',e.currentTarget.value)
                                 }}></input>
                             </fieldset>
                            
-                           
+                            {this.state.msg !== null &&
+                            <p class="msg">{this.state.msg}</p>
+                            }
                             <button type="submit">Mettez à jour vos infos persos</button>
                     </form>
                     

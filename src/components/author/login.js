@@ -115,14 +115,14 @@ class Login extends React.Component {
 						}}></input>
                     </fieldset>
                     <fieldset>
-                        <label htmlFor="password">Password : </label>
+                        <label htmlFor="password">Mot de passe : </label>
                         <input id="password" type ="password" name="password" placeholder="password"
                           onChange={(e)=>{
 							this.onChangetext('password',e.currentTarget.value)
 						}}></input>
                     </fieldset>
       
-                    <button type="submit">Log In</button>
+                    <button type="submit">Se connecter</button>
 
                 </form>
 

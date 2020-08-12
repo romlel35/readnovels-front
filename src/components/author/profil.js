@@ -35,7 +35,8 @@ class Profil extends React.Component{
         this.address = this.props.author.infos.address;
         this.zip = this.props.author.infos.zip;
         this.city = this.props.author.infos.city;
-        this.tjm = 55;
+        this.penName = this.props.author.infos.penName;
+        
         registerLocale('fr', fr)
       
     }
@@ -95,6 +96,7 @@ class Profil extends React.Component{
                     address: this.address,
                     zip: this.zip,
                     city: this.city,
+                    penName: this.penName
                 }
         console.log("data dans edit : ",data)
     
@@ -227,6 +229,14 @@ class Profil extends React.Component{
                                  defaultValue={this.props.author.infos.city}
                                 onChange={(e)=>{
                                     this.onChangetext('city',e.currentTarget.value)
+                                }}></input>
+                            </fieldset>
+                            <fieldset className="insideField" >
+                                <label htmlFor="penName">Nom de plume : </label>
+                                <input id="penName" name="penName" 
+                                 defaultValue={this.props.author.infos.city}
+                                onChange={(e)=>{
+                                    this.onChangetext('penName',e.currentTarget.value)
                                 }}></input>
                             </fieldset>
                            

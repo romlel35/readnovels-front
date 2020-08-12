@@ -41,7 +41,15 @@ html{
 }
 
 
+p{
 
+  margin: 1%;
+  text-align: center;
+}
+
+.msg{
+  color: red;
+}
 @media screen and (max-width: 750px) { 
   nav{
     margin: 0 auto;
