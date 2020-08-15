@@ -182,7 +182,7 @@ class Profil extends React.Component{
                             {this.props.author.isLogged && 
 
                             <fieldset className="topField">
-                                <label htmlFor="firstName">First Name : </label>
+                                <label htmlFor="firstName">Prénom : </label>
                                 <input id="firstName" name="firstName" 
                                defaultValue={this.props.author.infos.firstName}
                                     onChange={(e)=>{
@@ -191,7 +191,7 @@ class Profil extends React.Component{
                             </fieldset>
                              }
                             <fieldset className="insideField">
-                                <label htmlFor="lastName">Last Name : </label>
+                                <label htmlFor="lastName">Nom : </label>
                                 <input id="lastName" name="lastName"  
                                  defaultValue={this.props.author.infos.lastName}
                                 onChange={(e)=>{
@@ -208,7 +208,7 @@ class Profil extends React.Component{
                             </fieldset>
                        
                             <fieldset className="insideField" > 
-                                <label htmlFor="address">Address : </label>
+                                <label htmlFor="address">Adresse : </label>
                                 <input id="address" name="address"  
                                  defaultValue={this.props.author.infos.address}
                                 onChange={(e)=>{
@@ -216,7 +216,7 @@ class Profil extends React.Component{
                                 }}></input>
                             </fieldset>
                             <fieldset className="insideField" >
-                                <label htmlFor="zip">Zip : </label>
+                                <label htmlFor="zip">Code postal : </label>
                                 <input id="zip" name="zip"
                                  defaultValue={this.props.author.infos.zip}
                                 onChange={(e)=>{
@@ -224,7 +224,7 @@ class Profil extends React.Component{
                                 }}></input>
                             </fieldset>
                             <fieldset className="insideField" >
-                                <label htmlFor="city">City : </label>
+                                <label htmlFor="city">Ville : </label>
                                 <input id="city" name="city" 
                                  defaultValue={this.props.author.infos.city}
                                 onChange={(e)=>{

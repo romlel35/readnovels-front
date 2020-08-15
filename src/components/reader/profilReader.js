@@ -176,7 +176,7 @@ class Profil extends React.Component{
                             {this.props.reader.isLogged && 
 
                             <fieldset className="topField">
-                                <label htmlFor="firstName">First Name : </label>
+                                <label htmlFor="firstName">Prénom: </label>
                                 <input id="firstName" name="firstName" 
                                defaultValue={this.props.reader.infos.firstName}
                                     onChange={(e)=>{
@@ -185,7 +185,7 @@ class Profil extends React.Component{
                             </fieldset>
                              }
                             <fieldset className="insideField">
-                                <label htmlFor="lastName">Last Name : </label>
+                                <label htmlFor="lastName">Nom : </label>
                                 <input id="lastName" name="lastName"  
                                  defaultValue={this.props.reader.infos.lastName}
                                 onChange={(e)=>{

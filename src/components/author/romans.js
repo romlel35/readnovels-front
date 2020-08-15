@@ -139,7 +139,7 @@ class Romans extends React.Component{
 			    
 
                             <fieldset className="topField">
-                                <label htmlFor="title">Title : </label>
+                                <label htmlFor="title">Titre : </label>
                                 <input id="title" name="title" 
                              
                                     onChange={(e)=>{
@@ -148,7 +148,7 @@ class Romans extends React.Component{
                             </fieldset>
                              
                             <fieldset className="insideField">
-                                <label htmlFor="category">Category : </label>
+                                <label htmlFor="category">Catégorie : </label>
                                 <select    onChange={(e)=>{
                                     this.onChangetext('category',e.currentTarget.value)
                                 }}>
@@ -158,7 +158,7 @@ class Romans extends React.Component{
                                 </select>
                             </fieldset>
                             <fieldset className="insideField">
-                                <label htmlFor="summary">Summary : </label>
+                                <label htmlFor="summary">Résumé : </label>
                                 <input id="summary" name="summary" 
                                  maxLength="150"
                                 onChange={(e)=>{
@@ -166,7 +166,7 @@ class Romans extends React.Component{
                                 }}></input>
                             </fieldset>
                             <fieldset className="insideField">
-                                <label htmlFor="price">Price : </label>
+                                <label htmlFor="price">Prix : </label>
                                 <input id="price" name="price" type="number" 
                                  maxLength="5"
                                 onChange={(e)=>{
