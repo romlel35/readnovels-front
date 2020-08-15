@@ -19,7 +19,7 @@ class Footer extends React.Component{
             <div id="footer">
 
                
-                <p>Copyright @RomainLelaure  ----   Contact: romlel35@gmail.com</p>
+                <p>© 2020 - Maquette réalisée par Romain Lelaure - Contact: romlel35@gmail.com</p>
             </div>
         )
     }
