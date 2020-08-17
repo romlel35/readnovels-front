@@ -37,7 +37,7 @@ class Register extends React.Component{
 
     }
     handleSubmit(){
-        console.log("coucou on passe dans handleSubmit");
+        
 
         if(this.validatorPassword(this.password)){
             if(this.state.role === "auteur"){
@@ -172,6 +172,7 @@ class Register extends React.Component{
                         onChange={(e)=>{
                             this.onChangetext('password',e.currentTarget.value)
                         }}></input>
+                        <legend>Votre mot de passe doit faire au moins 8 caractères</legend>
                     </fieldset>
                    {this.state.role === "auteur" &&
                    

@@ -29,7 +29,7 @@ class SalonLecture extends React.Component{
   
         
         for(let i = 0; i< this.props.chapitres.listChapitres.length; i++){
-          console.log("coucou1");
+       
           console.log("********comparaison********");
           console.log("this.props.chapitres.listChapitres[i].title : ", this.props.chapitres.listChapitres[i].title );
           console.log("***************");
@@ -37,7 +37,7 @@ class SalonLecture extends React.Component{
           let comparateur = "Chapitre n°"+i+" : "+this.props.chapitres.listChapitres[i].title;
           if(this.chapterSelected === comparateur ){
             this.setState({ contentView: this.props.chapitres.listChapitres[i].content });
-            console.log("coucou2");
+            
           }
         }
         
@@ -45,9 +45,7 @@ class SalonLecture extends React.Component{
      
 
       seeChapitres(){
-        console.log("*TESSSSSSST 1");
-        
-        console.log("*TESSSSSSST 2");
+       
          this.props.listChapitresByRomanId(this.props.roman.roman.id);
          this.Chargement = true;
       

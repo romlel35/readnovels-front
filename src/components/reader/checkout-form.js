@@ -32,8 +32,7 @@ class CheckoutForm extends React.Component {
           this.setState({redirectBasket: true});
         }
 
-        console.log(paymentAuth);
-        console.log("***********Après ça merde*****");
+       
        
         const secret = paymentAuth.data.client_secret;
         console.log("secret : "+secret);

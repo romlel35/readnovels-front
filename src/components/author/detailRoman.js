@@ -39,7 +39,7 @@ class Romans extends React.Component{
 
       
       for(let i = 0; i< this.props.chapitres.listChapitres.length; i++){
-        console.log("coucou1");
+     
         console.log("********comparaison********");
         console.log("this.props.chapitres.listChapitres[i].title : ", this.props.chapitres.listChapitres[i].title );
         console.log("***************");

@@ -85,7 +85,7 @@ class Profil extends React.Component{
 
     
     handleSubmitUpdatePersonalInfos = () =>{
-        console.log("coucou")
+      
         console.log(this.lastName)
        
                 let data = {

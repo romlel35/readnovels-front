@@ -60,7 +60,7 @@ class Romans extends React.Component{
         })
     }
     handleSubmitAddNovel = () =>{
-        console.log("coucou")
+      
      
        
                 let data = {
@@ -97,7 +97,7 @@ class Romans extends React.Component{
     
     componentDidMount = () =>{
      
-        console.log("ici on monte les romans!!!!")
+        console.log("ici on monte les romans")
         this.props.listRomansByAuthorId(this.props.author.infos.id);
            
             //this.props.listRomans();
