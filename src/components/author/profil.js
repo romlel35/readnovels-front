@@ -40,44 +40,49 @@ class Profil extends React.Component{
         registerLocale('fr', fr)
       
     }
-    checkUploadResult = (resultEvent) => {
-	    if (resultEvent.event === "success") {
-		      console.log("RESULT", resultEvent);
-	
-		      console.log(resultEvent.info);
-		      let data = {
-		      	imageUrl: resultEvent.info.public_id,
-		      	id: this.props.author.infos.id
-		      }
-	
-		      Axios.post(config.apiUrl+'readnovels-rle/authors/updateImg', data, { headers: { 'x-access-token': this.props.author.infos.token }})
-		      .then((response)=>{
-				       	console.log(response)
-				       	if(response.data.status === 200) {
-				       		this.setState({
-                                  msg: 'Votre profil a bien été édité'});
-				       	}
-				        
-				    })
-		    }
-      };
-       //cloudinary needs some JS script to put in your index.html
-    showWidget = () => {
-	    let widget = window.cloudinary.createUploadWidget(
-	      {
-	        cloudName: "hg3x1q3eq",
-	        uploadPreset: "ebwnm9zh",
-	        maxImageWidth: 400,
-	        cropping: false,
-	      },
-	      (error, result) => {
-	        console.log(error);
-	        console.log(result);
-	        this.checkUploadResult(result);
-	      }
-	    );
-	    widget.open();
-      };
+   
+   //***Fonctions de Cloudinary pour ajouter une image****
+        checkUploadResult = (resultEvent) => {
+            if (resultEvent.event === "success") {
+                console.log("RESULT", resultEvent);
+        
+                console.log(resultEvent.info);
+                let data = {
+                    imageUrl: resultEvent.info.public_id,
+                    id: this.props.author.infos.id
+                }
+        
+                Axios.post(config.apiUrl+'readnovels-rle/authors/updateImg', data, { headers: { 'x-access-token': this.props.author.infos.token }})
+                .then((response)=>{
+                            console.log(response)
+                            if(response.data.status === 200) {
+                                this.setState({
+                                    msg: 'Votre profil a bien été édité'});
+                            }
+                            
+                        })
+                }
+        };
+        //cloudinary needs some JS script to put in your index.html
+        showWidget = () => {
+            let widget = window.cloudinary.createUploadWidget(
+            {
+                cloudName: "hg3x1q3eq",
+                uploadPreset: "ebwnm9zh",
+                maxImageWidth: 400,
+                cropping: false,
+            },
+            (error, result) => {
+                console.log(error);
+                console.log(result);
+                this.checkUploadResult(result);
+            }
+            );
+            widget.open();
+        };
+    //************************************** 
+
+
 
     onChangetext(type, text) {
 		this[type] = text;

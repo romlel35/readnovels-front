@@ -22,7 +22,7 @@ class SalonLecture extends React.Component{
         this.chapterSelected = "";
       
     }
-
+    //*******************Charge le chapitre sélectionné dans la liste déroulante**** */
     handleChange(event) {
         this.chapterSelected = event.target.value;
         console.log("chapterSelected : ",this.chapterSelected);

@@ -51,6 +51,8 @@ p{
   color: red;
 }
 @media screen and (max-width: 750px) { 
+  
+  /********Header*****/
   nav{
     margin: 0 auto;
   }
@@ -96,12 +98,12 @@ p{
   
   
 
-  /*bookstore*/
-  li{
-    margin: 2%;
-    list-style-type: none;
-    display: block;
-  }
+    /*bookstore*/
+    li{
+      margin: 2%;
+      list-style-type: none;
+      display: block;
+    }
 
   /******Footer ********/
   body {position: relative;}
@@ -123,7 +125,7 @@ p{
 *****Header***************
 *************************/
 @media screen and ( min-width: 750px) and (max-width: 1050px){
-
+/********Header*****/
 
   body{
     font-size: 1.2rem;
@@ -277,7 +279,7 @@ p{
 
 @media screen and ( min-width: 1050px){
 
-
+/********Header*****/
 
   body{
     font-size: 1.2rem;
