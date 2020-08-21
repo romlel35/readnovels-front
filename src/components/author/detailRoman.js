@@ -28,6 +28,7 @@ class Romans extends React.Component{
         this.title ="";
         this.content = "";
         this.chapterSelected = "";
+        this.numChapter = 1;
       
      
       
@@ -124,6 +125,7 @@ class Romans extends React.Component{
   seeChapitres(){
     console.log("*TESSSSSSST 1");
     this.props.listChapitresByRomanId(this.props.roman.roman.id);
+    this.setState({contentView: this.props.chapitres.listChapitres[0].content})
     console.log("*TESSSSSSST 2");
     
   }

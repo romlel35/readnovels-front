@@ -13,13 +13,14 @@ class SalonLecture extends React.Component{
         this.state = {
             msg : null,
             
-            contentView :"",
+            contentView :null,
         
         }
         this.Chargement = false;
         this.title ="";
         this.content = "";
         this.chapterSelected = "";
+        this.chapterNumber = 1;
       
     }
     //*******************Charge le chapitre sélectionné dans la liste déroulante**** */
@@ -61,8 +62,12 @@ class SalonLecture extends React.Component{
      
         console.log("*****On charge le Roman que le lecteur veut voir****");
         const id = this.props.match.params.id
+        if(this.props.roman.roman === null ){
         this.props.GetRomanById(id);
-
+        }
+        if(this.props.chapitres.listChapitres !== null){
+          this.setState({contentView: this.props.chapitres.listChapitres[0].content});
+        }
 
 }
     render(){
@@ -71,10 +76,11 @@ class SalonLecture extends React.Component{
                 this.setState({msgChapters : "Vous n'avez pas encore ajouté de chapitres"})
             }
           } 
-          if(this.Chargement){
+         if(this.Chargement){
             this.setState({contentView: this.props.chapitres.listChapitres[0].content});
             this.Chargement = false;
           }
+
 
           return(
 
@@ -98,9 +104,10 @@ class SalonLecture extends React.Component{
                     <p>{this.state.msg}</p>
                     }</p>
 
-                            <h2>Liste des chapitres</h2>
+                           
                             {this.props.chapitres.listChapitres !== null &&
                             <div>
+                               <h2>Liste des chapitres</h2>
                             <select onChange={(e)=>{
                                   
                                   this.handleChange(e);
@@ -120,8 +127,11 @@ class SalonLecture extends React.Component{
                               </select>
 
                               <article id="contentChapter">
-
-                                <p>{this.state.contentView}</p>
+                             
+                               <p>{this.state.contentView}</p>
+                              
+                              
+                               
                               </article>
                             </div>
                             
