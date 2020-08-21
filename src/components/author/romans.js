@@ -65,10 +65,10 @@ class Romans extends React.Component{
         Axios.post(config.apiUrl+"readnovels-rle/romans/register", data , { headers: { 'x-access-token': this.props.author.infos.token }}).then((response) =>{
 
                 if(response.status !== 200){
-                   this.setState({msg: "There was a problem during the update"})
+                   this.setState({msg: "Il y a eu un problème à la sauvegarde"})
                 }
                 else{
-                    this.setState({msg : "Your roman has been successfully added"});
+                    this.setState({msg : "Ton roman a bien été ajouté"});
                    
                     console.log("ici on monte les romans!!!!")
                     this.props.listRomansByAuthorId(this.props.author.infos.id);

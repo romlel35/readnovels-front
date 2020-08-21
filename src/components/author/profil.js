@@ -98,10 +98,10 @@ class Profil extends React.Component{
         Axios.put(config.api_url+"authors/updateAuthor", data , { headers: { 'x-access-token': this.props.author.infos.token }}).then((response) =>{
 
                 if(response.status !== 200){
-                   this.setState({msg: "There was a problem during the update"})
+                   this.setState({msg: "Il a eu un problème dans la mise à jour de tes infos"})
                 }
                 else{
-                    this.setState({msg : "Your infos have been successfully updated"})
+                    this.setState({msg : "Tes infos ont bien été mise à jour"})
                 }
                
         })
@@ -236,7 +236,7 @@ class Profil extends React.Component{
                             </fieldset>
                            
                            
-                            <button type="submit">MEttez à jour vos infos persos</button>
+                            <button type="submit">Mettez à jour vos infos persos</button>
                     </form>
                     
 

@@ -48,7 +48,7 @@ class Romans extends React.Component{
         let comparateur = "Chapitre n°"+i+" : "+this.props.chapitres.listChapitres[i].title;
         if(this.chapterSelected === comparateur ){
           this.setState({ contentView: this.props.chapitres.listChapitres[i].content });
-          console.log("coucou2");
+         
         }
       }
       
@@ -114,19 +114,19 @@ class Romans extends React.Component{
 
 
       if(response.status !== 200){
-        console.log("there is a problem with adding");
+        console.log("Il ya eu un problème à la sauvegarde");
       }
       else{
-        console.log("the chapter was succesfully added")
+        console.log("Le chapitre a bien été ajouté")
       }
     })
   }
 
   seeChapitres(){
-    console.log("*TESSSSSSST 1");
+   
     this.props.listChapitresByRomanId(this.props.roman.roman.id);
     this.setState({contentView: this.props.chapitres.listChapitres[0].content})
-    console.log("*TESSSSSSST 2");
+   
     
   }
     
