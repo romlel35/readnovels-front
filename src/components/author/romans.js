@@ -1,22 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import Axios from 'axios';
-import DatePicker from "react-datepicker";
-import { registerLocale, setDefaultLocale } from  "react-datepicker";
-import fr from 'date-fns/locale/fr';
 import {listRomans,listRomansByAuthorId} from "../../actions/authors/romansActions";
-import "react-datepicker/dist/react-datepicker.css";
 import config from'../../config';
-import moment from 'moment';
-import localization from 'moment/locale/fr';
 import {Link} from "react-router-dom";
 
-moment.updateLocale('fr', localization);
-
-var format = require('date-format');
-format.asString(); //defaults to ISO8601 format and current date.
-format.asString(new Date()); //defaults to ISO8601 format
-format.asString('hh:mm:ss.SSS', new Date()); //just the time
 
 
 
@@ -32,7 +20,7 @@ class Romans extends React.Component{
         this.summary = "";
         this.price = "";
      
-        registerLocale('fr', fr)
+ 
       
     }
    

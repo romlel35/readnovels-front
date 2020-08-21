@@ -2,7 +2,7 @@ import React from "react";
 import {connect} from 'react-redux'
 import {listRomans,listRomansByAuthorId, GetRomanById} from "../../actions/authors/romansActions";
 import {listChapitresByRomanId} from "../../actions/authors/chapitresActions";
-import config from'../../config';
+
 
 class SalonLecture extends React.Component{
 

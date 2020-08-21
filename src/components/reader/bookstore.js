@@ -1,16 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import Axios from 'axios';
-import DatePicker from "react-datepicker";
-import { registerLocale, setDefaultLocale } from  "react-datepicker";
-import fr from 'date-fns/locale/fr';
+
 
 import {listRomans,listRomansByAuthorId} from "../../actions/authors/romansActions";
 import {addOne} from "../../actions/panier"
 
-import "react-datepicker/dist/react-datepicker.css";
-import moment from 'moment';
-import localization from 'moment/locale/fr';
+
 
 import {
     Image,
@@ -19,12 +14,9 @@ import {
     CloudinaryContext,cloudinary
   } from "cloudinary-react";
 
-moment.updateLocale('fr', localization);
 
-var format = require('date-format');
-format.asString(); //defaults to ISO8601 format and current date.
-format.asString(new Date()); //defaults to ISO8601 format
-format.asString('hh:mm:ss.SSS', new Date()); //just the time
+
+
 var FA = require('react-fontawesome')
 
 
@@ -39,8 +31,7 @@ class BookStore extends React.Component{
         this.category = "";
         this.summary = "";
      
-        registerLocale('fr', fr)
-      
+  
     }
    
 
@@ -56,7 +47,7 @@ class BookStore extends React.Component{
      
             console.log("ici on monte les romans!!!!")
             this.props.listRomans();
-            //this.props.listRomans();
+       
         
         
        

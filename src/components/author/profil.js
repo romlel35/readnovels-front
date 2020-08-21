@@ -1,14 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import Axios from 'axios';
-import DatePicker from "react-datepicker";
-import { registerLocale, setDefaultLocale } from  "react-datepicker";
-import fr from 'date-fns/locale/fr';
-//import {listLessons} from "../../actions/authors/listeLessons";
-import "react-datepicker/dist/react-datepicker.css";
+
 import config from'../../config';
-import moment from 'moment';
-import localization from 'moment/locale/fr';
+
 import {
     Image,
     Video,
@@ -16,12 +11,7 @@ import {
     CloudinaryContext,cloudinary
   } from "cloudinary-react";
 
-moment.updateLocale('fr', localization);
 
-var format = require('date-format');
-format.asString(); //defaults to ISO8601 format and current date.
-format.asString(new Date()); //defaults to ISO8601 format
-format.asString('hh:mm:ss.SSS', new Date()); //just the time
 class Profil extends React.Component{
     constructor(props){
         super(props);
@@ -37,7 +27,7 @@ class Profil extends React.Component{
         this.city = this.props.author.infos.city;
         this.penName = this.props.author.infos.penName;
         
-        registerLocale('fr', fr)
+       
       
     }
    

@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 
-import fr from 'date-fns/locale/fr';
+
 import {listRomansByReaderId} from "../../actions/readers/romansActions";
 
 
@@ -40,10 +40,14 @@ class Library extends React.Component{
     
     componentDidMount = () =>{
      
-     
-            console.log("ici on monte les romans!!!!")
-            this.props.listRomansByReaderId(this.props.reader.infos.id);
            
+      if(this.props.reader.infos !== null){
+        console.log("ici on monte les romans!!!!")
+
+        setTimeout( this.props.listRomansByReaderId(this.props.reader.infos.id), 2000);
+       
+       
+      }
         
         
        
@@ -73,11 +77,11 @@ class Library extends React.Component{
 
 
 
-                    {this.props.romans.listRomans !== null &&
+                    {this.props.biblio.listRomansReader !== null &&
                     <div id="editNovels">
                       <ul>
                   
-                         {this.props.romans.listRomans.map((roman, index) =>{
+                         {this.props.biblio.listRomansReader.map((roman, index) =>{
 
                              return(
 
@@ -123,6 +127,7 @@ const mapStateToProps = (store) => {
     return {
       romans : store.romans,
       reader: store.reader,
+      biblio: store.biblio,
       panier: store.panier
     }
   }

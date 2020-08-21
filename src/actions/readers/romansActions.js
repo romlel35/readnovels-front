@@ -17,7 +17,7 @@ export const listRomansByReaderId = (id) =>{
             
         })
         .then((response)=>{
-            console.log("response action : ",response)
+            console.log("response action : ",response.data)
             list = response.data.romans;
             dispatch({
                 type: "GET_ALL_ROMANS_BY_READER",
