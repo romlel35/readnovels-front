@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import Axios from 'axios';
 import {listRomans,listRomansByAuthorId} from "../../actions/authors/romansActions";
 import config from'../../config';
+
 import {Link} from "react-router-dom";
 
 
@@ -20,7 +21,6 @@ class Romans extends React.Component{
         this.summary = "";
         this.price = "";
      
- 
       
     }
    
