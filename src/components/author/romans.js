@@ -48,7 +48,8 @@ class Romans extends React.Component{
 
             if(response.status === 200){
                 if(response.data.status === 200){
-                    this.setState({msg: response.data.msg})
+                    this.setState({msg: response.data.msg});
+                    this.props.listRomansByAuthorId(this.props.author.infos.id);
                 }
                 else{
                     this.setState({msg: response.data.msg})
@@ -132,7 +133,7 @@ class Romans extends React.Component{
                         e.preventDefault();
                         this.handleSubmitAddNovel();
                         }}>
-                            <h3>Add a new Novel</h3>
+                            <h3>Ajoutes un nouveau roman</h3>
                             
 
 
@@ -178,7 +179,7 @@ class Romans extends React.Component{
                            
                            
                             <button type="submit">
-                                Send your novel to the world
+                               Envoies ton roman sur l'internet !
                             </button>
                     </form>
 
@@ -186,7 +187,8 @@ class Romans extends React.Component{
 
                     {this.props.romans.listRomans !== null &&
                     <div id="editNovels">
-                        <h3>Your novels</h3>
+                        <h3>Tes romans</h3>
+                        <p>Cliques sur un roman pour lui ajouter des chapitres et/ou une couverture</p>
                     <table>
                      <thead>
                      <tr>
