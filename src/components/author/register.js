@@ -147,28 +147,28 @@ class Register extends React.Component{
                 }}>
                     <fieldset className="topField">
                         <label htmlFor="firstName">Prénom : </label>
-                        <input id="firstName" name="firstName" placeholder="firstName"
+                        <input id="firstName" name="firstName" 
                         onChange={(e)=>{
                             this.onChangetext('firstName',e.currentTarget.value)
                         }}></input>
                     </fieldset>
                     <fieldset className="insideField">
                         <label htmlFor="lastName">Nom : </label>
-                        <input id="lastName" name="lastName" placeholder="lastName" 
+                        <input id="lastName" name="lastName"
                         onChange={(e)=>{
                             this.onChangetext('lastName',e.currentTarget.value)
                         }}></input>
                     </fieldset>
                     <fieldset className="insideField">
                         <label htmlFor="email">Email : </label>
-                        <input id="email" name="email" type="email"  placeholder="email"
+                        <input id="email" name="email" type="email" 
                         onChange={(e)=>{
                             this.onChangetext('email',e.currentTarget.value)
                         }}></input>
                     </fieldset>
                     <fieldset className="insideField" >
                         <label htmlFor="password">Mot de passe : </label>
-                        <input id="password" type ="password" name="password" placeholder="password" 
+                        <input id="password" type ="password" name="password" 
                         onChange={(e)=>{
                             this.onChangetext('password',e.currentTarget.value)
                         }}></input>
@@ -179,21 +179,21 @@ class Register extends React.Component{
                    <div>
                         <fieldset className="insideField" > 
                             <label htmlFor="address">Adresse : </label>
-                            <input id="address" name="address" placeholder="address" 
+                            <input id="address" name="address" 
                             onChange={(e)=>{
                                 this.onChangetext('address',e.currentTarget.value)
                             }}></input>
                         </fieldset>
                         <fieldset className="insideField" >
                             <label htmlFor="zip">Code postal : </label>
-                            <input id="zip" name="zip" placeholder="zip"
+                            <input id="zip" name="zip" 
                             onChange={(e)=>{
                                 this.onChangetext('zip',e.currentTarget.value)
                             }}></input>
                         </fieldset>
                         <fieldset className="insideField" >
-                            <label htmlFor="city">City : </label>
-                            <input id="city" name="city" placeholder="city"
+                            <label htmlFor="city">Ville : </label>
+                            <input id="city" name="city" 
                             
                             onChange={(e)=>{
                                 this.onChangetext('zip',e.currentTarget.value)
@@ -201,7 +201,7 @@ class Register extends React.Component{
                         </fieldset>
                         <fieldset >
                             <label htmlFor="penName">Nom de plume : </label>
-                            <input id="penName" name="penName" placeholder="penName" 
+                            <input id="penName" name="penName"
                             onChange={(e)=>{
                                 this.onChangetext('penName',e.currentTarget.value)
                             }}></input>
