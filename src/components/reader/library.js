@@ -88,7 +88,7 @@ class Library extends React.Component{
                               
                                    
                                      <li className="hoverDetail" key={index}>
-                                       <Link to={"lecture/"+roman.id}>
+                                       <Link to={"lecture/"+roman.roman_id}>
                                        <h3> {roman.title}</h3>
                                          <CloudinaryContext cloudName="hg3x1q3eq">
                                             <div>
