@@ -51,7 +51,7 @@ export default class ResetPassword extends Component {
        console.log(response);
       if (response.data.status === 200) {
         this.setState({
-         email: response.data.auteur.email,
+         email: response.data.user.email,
           updated: false,
           isLoading: false,
           error: false,
