@@ -23,8 +23,8 @@ import Panier from "./components/reader/panier";
 import ProfilReader from "./components/reader/profilReader";
 import LogoutReader from "./components/reader/logoutReader";
 import Paiement from "./components/reader/payement";
-
-
+import ForgotPassword from "./components/forgotPassword";
+import ResetPassword from "./components/resetPassword"
 function App() {
   return (
     <div className="App">
@@ -34,6 +34,8 @@ function App() {
      <Route exact path="/register" component={RequireDataAuth(Register)}/>
      <Route exact path="/login" component={RequireDataAuth(Login)}/>
      <Route exact path="/home" component={RequireDataAuth(Home)}/>
+     <Route exact path="/forgotPassword" component={RequireDataAuth(ForgotPassword)}/>
+     <Route exact path="/reset/:token" component={RequireDataAuth(ResetPassword)}/>
 
      <Route exact path="/profil" component={RequireDataAuth(Profil, true)}/>
      <Route exact path="/logout" component={RequireDataAuth(Logout, true)}/>

@@ -1,7 +1,11 @@
-import React from 'react';
+import {Link} from "react-router-dom";
+import React, { Component } from 'react';
 import Axios from 'axios';
 import config from "../../config";
 import {Redirect} from 'react-router-dom';
+/* import {LinkButtons} from '../LinkButtons'; */
+
+
 class Login extends React.Component {
 
     constructor(props){
@@ -47,7 +51,7 @@ class Login extends React.Component {
            
             if(response.data.status === 200){
                 console.log("you are succesfully connected")
-                 this.setState({msg: "you are now connected"})
+                 this.setState({msg: "vous êtes connecté"})
                  if(this.state.role === "lecteur"){
                     window.localStorage.setItem('readnovels-reader-token', response.data.token);
                     window.localStorage.setItem('reader', response.data.reader);
@@ -125,7 +129,7 @@ class Login extends React.Component {
                     <button type="submit">Se connecter</button>
 
                 </form>
-
+              <Link to="/forgotPassword"> Mot de passe oublié</Link>
             </div>
 
 
