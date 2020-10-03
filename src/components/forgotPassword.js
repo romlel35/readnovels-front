@@ -52,12 +52,19 @@ class ForgotPassword extends Component {
           },
         ).then((response) => {
 
-          console.log(response.data);
-          if (response.data === 'recovery email sent') {
+        
+          if (response.data.status === 200) {
             this.setState({
               showError: false,
-              messageFromServer: 'recovery email sent',
+              messageFromServer: 'mail de récupération envoyé',
               showNullError: false,
+            });
+          }
+          else{
+            this.setState({
+              showError: true,
+              messageFromServer: 'mail non présent en base de donnée',
+              showNullError: true,
             });
           }
         })
