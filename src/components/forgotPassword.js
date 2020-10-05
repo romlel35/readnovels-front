@@ -52,7 +52,7 @@ class ForgotPassword extends Component {
           },
         ).then((response) => {
 
-        
+        console.log("réponse send mail, : ",response)
           if (response.data.status === 200) {
             this.setState({
               showError: false,
