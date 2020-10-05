@@ -126,16 +126,7 @@ export default class ResetPassword extends Component {
          
           <div style={loading}>
             <h4>Problème lors de la création du lien de récupération. Envoyez un nouveau mail de récupération.</h4>
-            <LinkButtons
-              buttonText="Go Home"
-              buttonStyle={homeButton}
-              link="/"
-            />
-            <LinkButtons
-              buttonStyle={forgotButton}
-              buttonText="Forgot Password?"
-              link="/forgotPassword"
-            />
+          
           </div>
         </div>
       );

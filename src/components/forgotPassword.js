@@ -55,7 +55,7 @@ class ForgotPassword extends Component {
         console.log("réponse send mail, : ",response)
           if (response.status === 200) {
             this.setState({
-              showError: false,
+              showError: true,
               messageFromServer: 'mail de récupération envoyé',
               showNullError: false,
             });
