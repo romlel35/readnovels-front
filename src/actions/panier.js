@@ -13,11 +13,7 @@ export const addOne = (list,newItem) => {
         if(same === -1) {
             list.push(newItem);
             newItem.quantityCart = 1;
-           console.log("ma liste : ",list);
-        
-        
-          
-      
+            console.log("ma liste : ",list);
             window.localStorage.setItem("panier",JSON.stringify(list));
             dispatch({
                 type: ADD_ONE,
